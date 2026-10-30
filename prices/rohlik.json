@@ -1,0 +1,337 @@
+{
+  "source": "Rohlik.cz – veřejně zobrazované nabídky",
+  "verified_on": "2026-10-30",
+  "currency": "CZK",
+  "price_type": "referenční snímek veřejných cen; nejde o aktuální košík",
+  "items": {
+    "batáty": {
+      "product_name": "Batát oranžomasý volný",
+      "package_price": 20.55,
+      "package_amount": 340,
+      "url": "https://www.rohlik.cz/c300102009-brambory",
+      "notes": "cca 340 g"
+    },
+    "bazalka": {
+      "product_name": "Rohlik.cz Bazalka v květináči",
+      "package_price": 49.9,
+      "package_amount": 40,
+      "url": "https://www.rohlik.cz/1309415-basil-in-a-pot",
+      "notes": "zelená hmota přes 40 g"
+    },
+    "borůvky": {
+      "product_name": "Borůvky, balení 125 g",
+      "package_price": 49.9,
+      "package_amount": 125,
+      "url": "https://www.rohlik.cz/1317247-boruvky-eat-me-baleni",
+      "notes": ""
+    },
+    "bramborové noky": {
+      "product_name": "Kitchin Bramborové noky 500 g",
+      "package_price": 28.9,
+      "package_amount": 500,
+      "url": "https://www.rohlik.cz/c300115097-gnocchi-a-tortelloni/znacka/arisi%2Crummo",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "brambory": {
+      "product_name": "Brambory konzumní typ B 2 kg",
+      "package_price": 49.9,
+      "package_amount": 2000,
+      "url": "https://www.rohlik.cz/c300102009-brambory/sort/unit-price-asc",
+      "notes": ""
+    },
+    "brokolice": {
+      "product_name": "Brokolice 1 ks (cca 500 g)",
+      "package_price": 49.9,
+      "package_amount": 500,
+      "url": "https://www.rohlik.cz/709025-brokolice-1-ks-cca-500-g",
+      "notes": "cca 500 g"
+    },
+    "broskev": {
+      "product_name": "Broskev 1 ks (cca 140 g)",
+      "package_price": 11.87,
+      "package_amount": 140,
+      "url": "https://www.rohlik.cz/1353935-broskev-1-ks",
+      "notes": "váhový produkt cca"
+    },
+    "celer bulva": {
+      "product_name": "Celer bulvový 1 ks (cca 870 g)",
+      "package_price": 30.53,
+      "package_amount": 870,
+      "url": "https://www.rohlik.cz/c300117153-ostatni-korenova-zelenina",
+      "notes": "váhový produkt cca"
+    },
+    "cottage": {
+      "product_name": "Miil Cottage sýr 200 g",
+      "package_price": 26.9,
+      "package_amount": 200,
+      "url": "https://www.rohlik.cz/",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "cuketa": {
+      "product_name": "Cuketa zelená 1 ks (cca 320 g)",
+      "package_price": 25.84,
+      "package_amount": 320,
+      "url": "https://www.rohlik.cz/c300102013-okurky-cukety-a-lilky/",
+      "notes": "váhový produkt cca"
+    },
+    "dýně Hokkaido": {
+      "product_name": "Dýně Hokkaido 1 ks (cca 1370 g)",
+      "package_price": 68.39,
+      "package_amount": 1370,
+      "url": "https://www.rohlik.cz/1350885-dyne-hokkaido-1ks",
+      "notes": "váhový produkt cca"
+    },
+    "hladká mouka": {
+      "product_name": "Kitchin Pšeničná mouka hladká 1 kg",
+      "package_price": 9.9,
+      "package_amount": 1000,
+      "url": "https://www.rohlik.cz/c300106003",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "hovězí kýta": {
+      "product_name": "Hovězí zadní / kýta",
+      "package_price": 454.87,
+      "package_amount": 1300,
+      "url": "https://www.rohlik.cz/c300117241-kyta",
+      "notes": "váhový produkt cca"
+    },
+    "jablko": {
+      "product_name": "Jablko červené malé (cca 140 g)",
+      "package_price": 5.63,
+      "package_amount": 140,
+      "url": "https://www.rohlik.cz/c300121734-jablka/",
+      "notes": "váhový produkt cca"
+    },
+    "jáhly": {
+      "product_name": "Alnatura BIO Jáhly 1 kg",
+      "package_price": 154.9,
+      "package_amount": 1000,
+      "url": "https://www.rohlik.cz/c300117063-bio-lusteniny",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "krůtí prsa": {
+      "product_name": "Krůtí prsa (cca 900 g)",
+      "package_price": 242.91,
+      "package_amount": 900,
+      "url": "https://www.rohlik.cz/c300117325-prsa/sort/unit-price-asc",
+      "notes": "váhový produkt cca"
+    },
+    "kukuřičná krupice (polenta)": {
+      "product_name": "Probio BIO Krupice kukuřičná 450 g",
+      "package_price": 41.9,
+      "package_amount": 450,
+      "url": "https://www.rohlik.cz/c300106007",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "kukuřičná mouka": {
+      "product_name": "Probio BIO Kukuřičná mouka hladká 450 g",
+      "package_price": 42.9,
+      "package_amount": 450,
+      "url": "https://www.rohlik.cz/1306343-probio-bio-smooth-corn-flour",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "kulatozrnná rýže": {
+      "product_name": "Lagris Rýže kulatozrnná 1 kg",
+      "package_price": 72.9,
+      "package_amount": 1000,
+      "url": "https://www.rohlik.cz/c300106097-ryze/sort/unit-price-asc",
+      "notes": ""
+    },
+    "kuřecí prsa": {
+      "product_name": "Kuřecí prsní řízky od českého výrobce (cca 500 g)",
+      "package_price": 109.95,
+      "package_amount": 500,
+      "url": "https://www.rohlik.cz/c300117325-prsa/sort/unit-price-asc",
+      "notes": "váhový produkt cca"
+    },
+    "květák": {
+      "product_name": "Květák 1 ks (min. 800 g)",
+      "package_price": 69.9,
+      "package_amount": 800,
+      "url": "https://www.rohlik.cz/1296021-kvetak-1ks",
+      "notes": "minimální uvedená hmotnost"
+    },
+    "meruňky": {
+      "product_name": null,
+      "package_price": null,
+      "package_amount": 500,
+      "url": null,
+      "notes": "Cena nedohledána; 500 g slouží jen jako referenční množství pro ruční doplnění ceny, nejde o ověřené balení."
+    },
+    "mléko bez laktózy": {
+      "product_name": "Pragolaktos trvanlivé mléko bez laktózy 1 l",
+      "package_price": 33.9,
+      "package_amount": 1000,
+      "url": "https://www.rohlik.cz/c300121234",
+      "notes": ""
+    },
+    "mozzarella": {
+      "product_name": "Miil Mozzarella 42 % 125 g",
+      "package_price": 22.9,
+      "package_amount": 125,
+      "url": "https://www.rohlik.cz/c300124066",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "mrkev": {
+      "product_name": "Mrkev praná čerstvá 1 kg",
+      "package_price": 29.9,
+      "package_amount": 1000,
+      "url": "https://www.rohlik.cz/c300102012",
+      "notes": ""
+    },
+    "okurka": {
+      "product_name": "Okurka hadovka (cca 300 g)",
+      "package_price": 24.9,
+      "package_amount": 300,
+      "url": "https://www.rohlik.cz/c300102013-okurky-cukety-a-lilky/",
+      "notes": "váhový produkt cca, prodáváno na kusy"
+    },
+    "olivový olej": {
+      "product_name": "Kitchin extra panenský olivový olej 750 ml",
+      "package_price": 159.9,
+      "package_amount": 750,
+      "url": "https://www.rohlik.cz/c300117567-olivove-oleje/",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "ovesná mouka": {
+      "product_name": "Adveni Ovesná mouka bez lepku 250 g",
+      "package_price": 70.9,
+      "package_amount": 250,
+      "url": "https://www.rohlik.cz/1373043-adveni-ovesna-mouka-bez-lepku",
+      "notes": ""
+    },
+    "ovesné vločky": {
+      "product_name": "Yutto ovesné vločky jemné 500 g",
+      "package_price": 11.9,
+      "package_amount": 500,
+      "url": "https://www.rohlik.cz/c300125019-vlocky",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "pažitka": {
+      "product_name": "Titbit Pažitka řezaná 30 g",
+      "package_price": 40.9,
+      "package_amount": 30,
+      "url": "https://www.rohlik.cz/1309935-",
+      "notes": ""
+    },
+    "petrželka": {
+      "product_name": "Titbit Petržel listová řezaná 30 g",
+      "package_price": 18.9,
+      "package_amount": 30,
+      "url": "https://www.rohlik.cz/c300102026-bylinky-a-koreni/akce/ano",
+      "notes": ""
+    },
+    "pohanka": {
+      "product_name": "Kitchin Pohanka 500 g",
+      "package_price": 33.9,
+      "package_amount": 500,
+      "url": "https://www.rohlik.cz/1455388-kitchin-pohanka",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "pohanková mouka": {
+      "product_name": "Natural Jihlava pohanková mouka 400 g",
+      "package_price": 70.9,
+      "package_amount": 400,
+      "url": "https://www.rohlik.cz/1469300-natural-jihlava-pohankova-mouka-bez-lepku",
+      "notes": ""
+    },
+    "quinoa": {
+      "product_name": "Grizly Quinoa bílá 500 g",
+      "package_price": 95.9,
+      "package_amount": 500,
+      "url": "https://www.rohlik.cz/1462576-grizly-quinoa-bila",
+      "notes": ""
+    },
+    "ricotta": {
+      "product_name": "Miil Ricotta 250 g",
+      "package_price": 29.9,
+      "package_amount": 250,
+      "url": "https://www.rohlik.cz/c300124582-syry-a-mlecne",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "rýže": {
+      "product_name": "Kitchin rýže dlouhozrnná 1 kg",
+      "package_price": 29.9,
+      "package_amount": 1000,
+      "url": "https://www.rohlik.cz/c300106097-ryze/sort/unit-price-asc",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "rýžová mouka": {
+      "product_name": "Extrudo Rýžová mouka 400 g",
+      "package_price": 35.9,
+      "package_amount": 400,
+      "url": "https://www.rohlik.cz/1314987-extrudo-mouka-ryzova-vyberova",
+      "notes": ""
+    },
+    "rýžové nudle": {
+      "product_name": "Bamboo Tree nudle vermicelli 400 g",
+      "package_price": 50.9,
+      "package_amount": 400,
+      "url": "https://www.rohlik.cz/c300124418-vietnam",
+      "notes": ""
+    },
+    "tvaroh": {
+      "product_name": "Miil Tvaroh polotučný 250 g",
+      "package_price": 19.9,
+      "package_amount": 250,
+      "url": "https://www.rohlik.cz/c300123065-tvarohy/sort/price-asc",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "tymián": {
+      "product_name": "Titbit Tymián řezaný 30 g",
+      "package_price": 30.9,
+      "package_amount": 30,
+      "url": "https://www.rohlik.cz/c300102026-bylinky-a-koreni/akce/ano",
+      "notes": ""
+    },
+    "těstoviny": {
+      "product_name": "Kitchin Spaghetti N. 5 500 g",
+      "package_price": 15.9,
+      "package_amount": 500,
+      "url": "https://www.rohlik.cz/",
+      "notes": "zástupce pro běžné těstoviny"
+    },
+    "vejce": {
+      "product_name": "Milujeme vejce cereální podestýlková M 10 ks",
+      "package_price": 67.9,
+      "package_amount": 10,
+      "url": "https://www.rohlik.cz/c300105053-vejce-a-drozdi/sales/",
+      "notes": ""
+    },
+    "vepřová panenka": {
+      "product_name": "Česká Vepřová panenka (cca 600 g)",
+      "package_price": 209.94,
+      "package_amount": 600,
+      "url": "https://www.rohlik.cz/c300115199-panenka",
+      "notes": "váhový produkt cca"
+    },
+    "čerstvý kozí sýr": {
+      "product_name": "Biofarma DoRa BIO čerstvý kozí sýr 85 g",
+      "package_price": 54.9,
+      "package_amount": 85,
+      "url": "https://www.rohlik.cz/c300122648-syry-k-vinu",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "červená řepa": {
+      "product_name": "Červená řepa síť 1 kg",
+      "package_price": 24.9,
+      "package_amount": 1000,
+      "url": "https://www.rohlik.cz/c300102012",
+      "notes": ""
+    },
+    "řepkový olej": {
+      "product_name": "Kitchin Řepkový olej 1 l",
+      "package_price": 34.9,
+      "package_amount": 1000,
+      "url": "https://www.rohlik.cz/cs-CZ/c300123422-oleje",
+      "notes": "běžná veřejná cena před slevou"
+    },
+    "žervé": {
+      "product_name": "Krajanka Žervé natur 80 g",
+      "package_price": 18.9,
+      "package_amount": 80,
+      "url": "https://www.rohlik.cz/c300105031-zerve-a-lucina",
+      "notes": ""
+    }
+  }
+}

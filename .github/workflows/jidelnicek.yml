@@ -1,0 +1,95 @@
+name: U stolu · automatický jídelníček
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/**'
+      - 'plans/**'
+      - 'recipes/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/jidelnicek.yml'
+  workflow_dispatch:
+    inputs:
+      generate_next_week:
+        description: 'Vytvořit nový týden z databáze receptů'
+        type: boolean
+        default: false
+        required: false
+      week_start:
+        description: 'Volitelně pondělí YYYY-MM-DD; prázdné = nejbližší příští pondělí'
+        type: string
+        default: ''
+        required: false
+  schedule:
+    - cron: '17 9 * * 6'
+      timezone: 'Europe/Prague'
+
+concurrency:
+  group: u-stolu-180-foto-publikace
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Stáhnout repozitář
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Nastavit Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Najít nahrané AI obrázky podle ID receptů
+        run: python scripts/build_photo_index.py
+      - name: Otestovat knihovnu a plánování
+        run: python -m unittest discover -s tests -v
+      - name: Vygenerovat týden pouze podle harmonogramu nebo ruční volby
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.generate_next_week)
+        env:
+          TARGET_WEEK: ${{ inputs.week_start || '' }}
+        run: |
+          if [ -n "$TARGET_WEEK" ]; then
+            python scripts/generate_week.py --week "$TARGET_WEEK"
+          else
+            python scripts/generate_week.py
+          fi
+      - name: Uložit nový týden do historie
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.generate_next_week)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add plans/
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: uložit nový jídelníček [skip ci]'
+            git push origin HEAD:main
+          else
+            echo 'Týden již existuje, historie se nemění.'
+          fi
+      - name: Sestavit statickou aplikaci
+        run: python scripts/build_site.py
+      - name: Nastavit GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Připravit balíček pro Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Zveřejnit web
+        id: deployment
+        uses: actions/deploy-pages@v4

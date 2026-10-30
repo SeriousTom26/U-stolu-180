@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "weeks": [
+    {
+      "file": "2026-11-02.json",
+      "start": "2026-11-02",
+      "end": "2026-11-08",
+      "meat_count": 2,
+      "meals": 21
+    }
+  ]
+}
