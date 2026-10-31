@@ -48,16 +48,27 @@ def source_list() -> tuple[list[tuple[str, str]], int, int, dict]:
     if ids != queue[start : start + BATCH_SIZE]:
         raise ValueError("ID musí odpovídat 10 sousedním receptům v původním pořadí")
     for recipe_id, url in rows:
+        local_source = f"assets/photos/{recipe_id}.png"
+        if url == local_source:
+            # Offline-local source bundled into the same git push (no expiring URL).
+            continue
         parsed = urlparse(url)
         if parsed.scheme != "https" or parsed.hostname not in ALLOWED_IMAGE_HOSTS or "_jwt=" not in parsed.query:
-            raise ValueError(f"Chybný odkaz pro {recipe_id}")
+            raise ValueError(f"Chybný odkaz nebo cesta pro {recipe_id}")
     return [(r[0], r[1]) for r in rows], start + 1, start + BATCH_SIZE, library
 
 
 def download_checked(recipe_id: str, url: str, output: Path) -> tuple[int, int]:
-    req = Request(url, headers={"User-Agent": "Mozilla/5.0 (U-stolu-180-photo-import)"})
-    with urlopen(req, timeout=90) as res:
-        image_bytes = res.read(MAX_FILE_BYTES + 1)
+    if url == f"assets/photos/{recipe_id}.png":
+        # A fully offline import mode: PNG file already present in the upload.
+        # Only exact known filenames from assets/photos are allowed.
+        source_file = ROOT / url
+        with source_file.open("rb") as f:
+            image_bytes = f.read(MAX_FILE_BYTES + 1)
+    else:
+        req = Request(url, headers={"User-Agent": "Mozilla/5.0 (U-stolu-180-photo-import)"})
+        with urlopen(req, timeout=90) as res:
+            image_bytes = res.read(MAX_FILE_BYTES + 1)
     if not 2000 <= len(image_bytes) <= MAX_FILE_BYTES:
         raise ValueError(f"{recipe_id}: neplatná velikost obrázku")
     with Image.open(BytesIO(image_bytes)) as check:
