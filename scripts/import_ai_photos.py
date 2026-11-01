@@ -25,7 +25,7 @@ SOURCE = ROOT / "scripts" / "ai_photo_import.tsv"
 DEST = ROOT / "assets" / "photos"
 BATCH_SIZE = 10
 MAX_FILE_BYTES = 20 * 1024 * 1024
-ALLOWED_IMAGE_HOSTS = {"dnznrvs05pmza.cloudfront.net"}
+ALLOWED_IMAGE_HOSTS = {"dnznrvs05pmza.cloudfront.net", "cdn.gamma.app"}
 
 
 def recipe_db() -> tuple[list[str], dict]:
@@ -53,8 +53,14 @@ def source_list() -> tuple[list[tuple[str, str]], int, int, dict]:
             # Offline-local source bundled into the same git push (no expiring URL).
             continue
         parsed = urlparse(url)
-        if parsed.scheme != "https" or parsed.hostname not in ALLOWED_IMAGE_HOSTS or "_jwt=" not in parsed.query:
+        if parsed.scheme != "https" or parsed.hostname not in ALLOWED_IMAGE_HOSTS or parsed.username or parsed.password or parsed.port:
             raise ValueError(f"Chybný odkaz nebo cesta pro {recipe_id}")
+        if parsed.hostname == "cdn.gamma.app":
+            if not (parsed.path.startswith("/ikcjzrkyvk8lt3o/design-anything/") and parsed.path.endswith(".jpg") and not parsed.query):
+                raise ValueError(f"Neočekávaný odkaz Gamma pro {recipe_id}")
+        else:
+            if "_jwt=" not in parsed.query:
+                raise ValueError(f"Chybějící autorizace fotky pro {recipe_id}")
     return [(r[0], r[1]) for r in rows], start + 1, start + BATCH_SIZE, library
 
 
