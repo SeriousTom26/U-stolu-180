@@ -1,0 +1,1324 @@
+{
+  "schema_version": 2,
+  "week_start": "2026-11-09",
+  "week_end": "2026-11-15",
+  "servings": 2,
+  "recipe_count": 21,
+  "meat_count": 2,
+  "notes": [
+    "21 jídel pro 2 dospělé",
+    "Bez snídaňových kaší a rýžových chlebíčků",
+    "2 masová hlavní jídla za týden",
+    "Čerstvé mléčné výrobky a vejce podle vlastní tolerance; přísné vyřazování má být krátkodobé"
+  ],
+  "days": [
+    {
+      "date": "2026-11-09",
+      "day_name": "Pondělí",
+      "meals": [
+        {
+          "id": "b-ovesne-livance-3",
+          "category": "breakfast",
+          "family": "ovesne-livance",
+          "title": "Ovesné lívance s meruňkami a ricottou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 20,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "pancake",
+          "ingredients": [
+            {
+              "name": "ovesná mouka",
+              "amount": 160,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "vejce",
+              "amount": 2,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "mléko bez laktózy",
+              "amount": 180,
+              "unit": "ml",
+              "section": "Mléčné"
+            },
+            {
+              "name": "ricotta",
+              "amount": 170,
+              "unit": "g",
+              "section": "Mléčné"
+            },
+            {
+              "name": "meruňky",
+              "amount": 130,
+              "unit": "g",
+              "section": "Ovoce"
+            }
+          ],
+          "steps": [
+            "Smíchej mouku s vejci a mlékem či vodou na hladké, spíše řidší těsto.",
+            "Na lehce vymazané nepřilnavé pánvi opékej malé palačinky z obou stran dozlatova.",
+            "Na ještě vlažné palačinky dej čerstvý sýr a připravené ovoce či zeleninu."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce"
+          ],
+          "image": "assets/img/b-ovesne-livance-3.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "l-pecene-bataty-3",
+          "category": "lunch",
+          "family": "pecene-bataty",
+          "title": "Pečené batáty s kozím sýrem",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 40,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "tray",
+          "ingredients": [
+            {
+              "name": "batáty",
+              "amount": 520,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "olivový olej",
+              "amount": 12,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "čerstvý kozí sýr",
+              "amount": 150,
+              "unit": "g",
+              "section": "Mléčné"
+            },
+            {
+              "name": "pažitka",
+              "amount": 8,
+              "unit": "g",
+              "section": "Bylinky"
+            }
+          ],
+          "steps": [
+            "Brambory, batáty či tvrdší zeleninu nakrájej na menší kusy a rozlož na plech. Čerstvou okurku nepeč.",
+            "Lehce zakápni olejem a peč v troubě při 190–200 °C do změknutí.",
+            "Přidej čerstvý sýr až nakonec, případně jen krátce zapeč."
+          ],
+          "allergens": [
+            "mléko"
+          ],
+          "image": "assets/img/l-pecene-bataty-3.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "d-ryze-s-pecenou-zeleninou-2",
+          "category": "dinner",
+          "family": "ryze-s-pecenou-zeleninou",
+          "title": "Rýže s pečenou dýní a mozzarellou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 30,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "rice",
+          "ingredients": [
+            {
+              "name": "rýže",
+              "amount": 180,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "řepkový olej",
+              "amount": 12,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "dýně Hokkaido",
+              "amount": 280,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "mozzarella",
+              "amount": 150,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Rýži propláchni a uvař čerstvou těsně před podáváním.",
+            "Zeleninu nakrájej na drobno a krátce opeč na pánvi.",
+            "Smíchej s rýží a případně čerstvým sýrem či vejcem; ihned servíruj."
+          ],
+          "allergens": [
+            "mléko"
+          ],
+          "image": "assets/img/d-ryze-s-pecenou-zeleninou-2.svg",
+          "image_kind": "originální ilustrace"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "day_name": "Úterý",
+      "meals": [
+        {
+          "id": "b-dynove-placicky-3",
+          "category": "breakfast",
+          "family": "dynove-placicky",
+          "title": "Dýňovo-bramborové placičky s ricottou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 30,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "fritter",
+          "ingredients": [
+            {
+              "name": "dýně Hokkaido",
+              "amount": 320,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "brambory",
+              "amount": 220,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "vejce",
+              "amount": 1,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "hladká mouka",
+              "amount": 60,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "ricotta",
+              "amount": 160,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Syrovou zeleninu nebo brambory nastrouhej a dobře vymačkej přebytečnou tekutinu.",
+            "Promíchej s moukou a vejcem, ze směsi vytvaruj menší placičky.",
+            "Na troše oleje opékej z obou stran do propečení; podávej s čerstvou oblohou nebo sýrem."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce",
+            "lepek"
+          ],
+          "image": "assets/img/b-dynove-placicky-3.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "l-vejce-s-bramborami-3",
+          "category": "lunch",
+          "family": "vejce-s-bramborami",
+          "title": "Bramborová frittata s dýní",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 35,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "omelet",
+          "ingredients": [
+            {
+              "name": "vejce",
+              "amount": 4,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "brambory",
+              "amount": 420,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "dýně Hokkaido",
+              "amount": 260,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "cottage",
+              "amount": 160,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Brambory (pokud jsou v surovinách) nejprve uvař doměkka; ostatní zeleninu nakrájej a krátce podus na pánvi.",
+            "Vejce rozšlehej se špetkou soli, nalij na zeleninu a zakryté propeč.",
+            "Na závěr případně přidej čerstvý sýr a podávej s připravenou přílohou."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce"
+          ],
+          "image": "assets/img/l-vejce-s-bramborami-3.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "d-kremova-dynova-polevka-3",
+          "category": "dinner",
+          "family": "kremova-dynova-polevka",
+          "title": "Dýňový krém s pohankovými krutony",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 30,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "soup",
+          "ingredients": [
+            {
+              "name": "dýně Hokkaido",
+              "amount": 460,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "brambory",
+              "amount": 160,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "řepkový olej",
+              "amount": 10,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "pohanka",
+              "amount": 110,
+              "unit": "g",
+              "section": "Trvanlivé"
+            }
+          ],
+          "steps": [
+            "Zeleninu nakrájej na stejnoměrné kostky a krátce orestuj na troše oleje.",
+            "Zalij čerstvou vodou, vař asi 15–25 minut doměkka a rozmixuj.",
+            "Pokud jsou uvedené polenta či pohanka, uvař je zvlášť podle návodu. Z mouky s vodou připrav placku a opeč ji na suché pánvi.",
+            "Podávej s připravenou přílohou nebo čerstvým sýrem; zbytky rychle zchlaď."
+          ],
+          "allergens": [],
+          "image": "assets/img/d-kremova-dynova-polevka-3.svg",
+          "image_kind": "originální ilustrace"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "day_name": "Středa",
+      "meals": [
+        {
+          "id": "b-tvarohove-rezy-1",
+          "category": "breakfast",
+          "family": "tvarohove-rezy",
+          "title": "Tvarohový pečený řez s borůvkami",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 40,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "bake",
+          "ingredients": [
+            {
+              "name": "tvaroh",
+              "amount": 280,
+              "unit": "g",
+              "section": "Mléčné"
+            },
+            {
+              "name": "vejce",
+              "amount": 2,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "ovesná mouka",
+              "amount": 90,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "borůvky",
+              "amount": 120,
+              "unit": "g",
+              "section": "Ovoce"
+            }
+          ],
+          "steps": [
+            "Předehřej troubu na 180 °C a vylož malou formu pečicím papírem. Polentu nebo quinou (pokud je používáš) nejprve uvař podle návodu.",
+            "Promíchej těsto či zapékací směs ze surovin; ovoce nebo zeleninu vmíchej nakonec.",
+            "Peč přibližně 25–35 minut do zpevnění a propečení středu; podávej čerstvé."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce"
+          ],
+          "image": "assets/img/b-tvarohove-rezy-1.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "l-kureci-obed-3",
+          "category": "lunch",
+          "family": "kureci-obed",
+          "title": "Kuřecí prso s pohankou a dýní",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 35,
+          "servings": 2,
+          "protein": "meat",
+          "season": [
+            "all"
+          ],
+          "method": "meat",
+          "ingredients": [
+            {
+              "name": "kuřecí prsa",
+              "amount": 320,
+              "unit": "g",
+              "section": "Maso"
+            },
+            {
+              "name": "řepkový olej",
+              "amount": 12,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "pohanka",
+              "amount": 175,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "dýně Hokkaido",
+              "amount": 315,
+              "unit": "g",
+              "section": "Zelenina"
+            }
+          ],
+          "steps": [
+            "Čerstvé maso zpracuj co nejdříve po nákupu, případně použij správně rozmražené. Nakrájej ho na menší porce a osol.",
+            "Maso zprudka zatáhni na pánvi, poté podle tloušťky a druhu dopeč či podus do bezpečného propečení; u drůbeže zkontroluj propečení ve středu.",
+            "Mezitím uvař uvedenou rýži, pohanku nebo brambory a připrav zeleninu v páře či na plechu.",
+            "Podávej hned; neskladuj maso opakovaně ohřívané několik dní."
+          ],
+          "allergens": [],
+          "image": "assets/img/l-kureci-obed-3.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "d-peceny-batat-2",
+          "category": "dinner",
+          "family": "peceny-batat",
+          "title": "Batáty s mozzarellou a cuketou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 40,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "tray",
+          "ingredients": [
+            {
+              "name": "batáty",
+              "amount": 500,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "řepkový olej",
+              "amount": 12,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "mozzarella",
+              "amount": 160,
+              "unit": "g",
+              "section": "Mléčné"
+            },
+            {
+              "name": "cuketa",
+              "amount": 260,
+              "unit": "g",
+              "section": "Zelenina"
+            }
+          ],
+          "steps": [
+            "Brambory, batáty či tvrdší zeleninu nakrájej na menší kusy a rozlož na plech. Čerstvou okurku nepeč.",
+            "Lehce zakápni olejem a peč v troubě při 190–200 °C do změknutí.",
+            "Přidej čerstvý sýr až nakonec, případně jen krátce zapeč."
+          ],
+          "allergens": [
+            "mléko"
+          ],
+          "image": "assets/img/d-peceny-batat-2.svg",
+          "image_kind": "originální ilustrace"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "day_name": "Čtvrtek",
+      "meals": [
+        {
+          "id": "b-zeleninove-vajecne-muffiny-3",
+          "category": "breakfast",
+          "family": "zeleninove-vajecne-muffiny",
+          "title": "Vaječné muffiny s dýní a mozzarellou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 30,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "muffin",
+          "ingredients": [
+            {
+              "name": "vejce",
+              "amount": 4,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "pohanková mouka",
+              "amount": 110,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "dýně Hokkaido",
+              "amount": 155,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "mozzarella",
+              "amount": 100,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Předehřej troubu na 180 °C, formu na muffiny vymaž nebo vylož košíčky.",
+            "Smíchej vejce, mouku a najemno nasekanou zeleninu; těsto rozděl do formiček.",
+            "Peč asi 20–25 minut, dokud jsou muffiny uvnitř propečené."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce"
+          ],
+          "image": "assets/img/b-zeleninove-vajecne-muffiny-3.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "l-bramborove-placky-1",
+          "category": "lunch",
+          "family": "bramborove-placky",
+          "title": "Bramborové placičky s tvarohem a pažitkou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 30,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "fritter",
+          "ingredients": [
+            {
+              "name": "brambory",
+              "amount": 520,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "hladká mouka",
+              "amount": 75,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "vejce",
+              "amount": 2,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "tvaroh",
+              "amount": 180,
+              "unit": "g",
+              "section": "Mléčné"
+            },
+            {
+              "name": "pažitka",
+              "amount": 10,
+              "unit": "g",
+              "section": "Bylinky"
+            }
+          ],
+          "steps": [
+            "Syrovou zeleninu nebo brambory nastrouhej a dobře vymačkej přebytečnou tekutinu.",
+            "Promíchej s moukou a vejcem, ze směsi vytvaruj menší placičky.",
+            "Na troše oleje opékej z obou stran do propečení; podávej s čerstvou oblohou nebo sýrem."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce",
+            "lepek"
+          ],
+          "image": "assets/img/l-bramborove-placky-1.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "d-bramborove-frittaty-3",
+          "category": "dinner",
+          "family": "bramborove-frittaty",
+          "title": "Frittata s mrkví a cottage",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 30,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "omelet",
+          "ingredients": [
+            {
+              "name": "vejce",
+              "amount": 4,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "brambory",
+              "amount": 340,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "mrkev",
+              "amount": 280,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "cottage",
+              "amount": 150,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Brambory (pokud jsou v surovinách) nejprve uvař doměkka; ostatní zeleninu nakrájej a krátce podus na pánvi.",
+            "Vejce rozšlehej se špetkou soli, nalij na zeleninu a zakryté propeč.",
+            "Na závěr případně přidej čerstvý sýr a podávej s připravenou přílohou."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce"
+          ],
+          "image": "assets/img/d-bramborove-frittaty-3.svg",
+          "image_kind": "originální ilustrace"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "day_name": "Pátek",
+      "meals": [
+        {
+          "id": "b-kukuricne-placky-3",
+          "category": "breakfast",
+          "family": "kukuricne-placky",
+          "title": "Kukuřičné placky s kozím sýrem a okurkou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 25,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "pancake",
+          "ingredients": [
+            {
+              "name": "kukuřičná mouka",
+              "amount": 170,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "vejce",
+              "amount": 2,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "mléko bez laktózy",
+              "amount": 160,
+              "unit": "ml",
+              "section": "Mléčné"
+            },
+            {
+              "name": "čerstvý kozí sýr",
+              "amount": 140,
+              "unit": "g",
+              "section": "Mléčné"
+            },
+            {
+              "name": "okurka",
+              "amount": 150,
+              "unit": "g",
+              "section": "Zelenina"
+            }
+          ],
+          "steps": [
+            "Smíchej mouku s vejci a mlékem či vodou na hladké, spíše řidší těsto.",
+            "Na lehce vymazané nepřilnavé pánvi opékej malé palačinky z obou stran dozlatova.",
+            "Na ještě vlažné palačinky dej čerstvý sýr a připravené ovoce či zeleninu."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce"
+          ],
+          "image": "assets/img/b-kukuricne-placky-3.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "l-jahlovy-talir-2",
+          "category": "lunch",
+          "family": "jahlovy-talir",
+          "title": "Jáhly s cuketou a ricottou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 30,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "salad",
+          "ingredients": [
+            {
+              "name": "jáhly",
+              "amount": 185,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "olivový olej",
+              "amount": 12,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "cuketa",
+              "amount": 290,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "ricotta",
+              "amount": 170,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Obilninu propláchni a uvař podle návodu na obalu; nech krátce zchladnout.",
+            "Zeleninu dobře omyj, tvrdší zeleninu upeč nebo uvař doměkka.",
+            "Smíchej s čerstvým sýrem, bylinkami a trochou oleje; podávej hned."
+          ],
+          "allergens": [
+            "mléko"
+          ],
+          "image": "assets/img/l-jahlovy-talir-2.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "d-jemne-zeleninove-noky-2",
+          "category": "dinner",
+          "family": "jemne-zeleninove-noky",
+          "title": "Noky s dýní a ricottou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 25,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "gnocchi",
+          "ingredients": [
+            {
+              "name": "bramborové noky",
+              "amount": 420,
+              "unit": "g",
+              "section": "Chlazené"
+            },
+            {
+              "name": "dýně Hokkaido",
+              "amount": 290,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "ricotta",
+              "amount": 170,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Noky připrav podle obalu nebo z čerstvých uvařených brambor a mouky.",
+            "Zeleninu podus do změknutí v samostatné pánvi.",
+            "Noky krátce promíchej se zeleninou a čerstvým sýrem; podávej ihned."
+          ],
+          "allergens": [
+            "mléko"
+          ],
+          "image": "assets/img/d-jemne-zeleninove-noky-2.svg",
+          "image_kind": "originální ilustrace"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "day_name": "Sobota",
+      "meals": [
+        {
+          "id": "b-ovesne-rezy-1",
+          "category": "breakfast",
+          "family": "ovesne-rezy",
+          "title": "Pečené ovesné řezy s borůvkami",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 35,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "bake",
+          "ingredients": [
+            {
+              "name": "ovesné vločky",
+              "amount": 180,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "vejce",
+              "amount": 2,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "mléko bez laktózy",
+              "amount": 150,
+              "unit": "ml",
+              "section": "Mléčné"
+            },
+            {
+              "name": "borůvky",
+              "amount": 130,
+              "unit": "g",
+              "section": "Ovoce"
+            }
+          ],
+          "steps": [
+            "Předehřej troubu na 180 °C a vylož malou formu pečicím papírem. Polentu nebo quinou (pokud je používáš) nejprve uvař podle návodu.",
+            "Promíchej těsto či zapékací směs ze surovin; ovoce nebo zeleninu vmíchej nakonec.",
+            "Peč přibližně 25–35 minut do zpevnění a propečení středu; podávej čerstvé."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce"
+          ],
+          "image": "assets/img/b-ovesne-rezy-1.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "l-bramborove-zapekanky-2",
+          "category": "lunch",
+          "family": "bramborove-zapekanky",
+          "title": "Zapečené brambory s cuketou a ricottou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 45,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "tray",
+          "ingredients": [
+            {
+              "name": "brambory",
+              "amount": 550,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "olivový olej",
+              "amount": 15,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "cuketa",
+              "amount": 320,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "ricotta",
+              "amount": 180,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Brambory, batáty či tvrdší zeleninu nakrájej na menší kusy a rozlož na plech. Čerstvou okurku nepeč.",
+            "Lehce zakápni olejem a peč v troubě při 190–200 °C do změknutí.",
+            "Přidej čerstvý sýr až nakonec, případně jen krátce zapeč."
+          ],
+          "allergens": [
+            "mléko"
+          ],
+          "image": "assets/img/l-bramborove-zapekanky-2.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "d-pecena-mrkev-s-prilohou-1",
+          "category": "dinner",
+          "family": "pecena-mrkev-s-prilohou",
+          "title": "Pečená mrkev s pohankou a ricottou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 35,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "veg",
+          "ingredients": [
+            {
+              "name": "mrkev",
+              "amount": 350,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "řepkový olej",
+              "amount": 12,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "pohanka",
+              "amount": 175,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "ricotta",
+              "amount": 165,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Zeleninu očisti a nakrájej na menší porce.",
+            "Základní přílohu uvař podle návodu; zeleninu opeč či podus do změknutí.",
+            "Smíchej s čerstvým sýrem nebo vejcem podle surovin a ihned podávej."
+          ],
+          "allergens": [
+            "mléko"
+          ],
+          "image": "assets/img/d-pecena-mrkev-s-prilohou-1.svg",
+          "image_kind": "originální ilustrace"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "day_name": "Neděle",
+      "meals": [
+        {
+          "id": "b-bramborove-rosti-1",
+          "category": "breakfast",
+          "family": "bramborove-rosti",
+          "title": "Bramborové rösti s cottage a pažitkou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 30,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "fritter",
+          "ingredients": [
+            {
+              "name": "brambory",
+              "amount": 480,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "vejce",
+              "amount": 1,
+              "unit": "ks",
+              "section": "Vejce"
+            },
+            {
+              "name": "hladká mouka",
+              "amount": 45,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "cottage",
+              "amount": 180,
+              "unit": "g",
+              "section": "Mléčné"
+            },
+            {
+              "name": "pažitka",
+              "amount": 10,
+              "unit": "g",
+              "section": "Bylinky"
+            }
+          ],
+          "steps": [
+            "Syrovou zeleninu nebo brambory nastrouhej a dobře vymačkej přebytečnou tekutinu.",
+            "Promíchej s moukou a vejcem, ze směsi vytvaruj menší placičky.",
+            "Na troše oleje opékej z obou stran do propečení; podávej s čerstvou oblohou nebo sýrem."
+          ],
+          "allergens": [
+            "mléko",
+            "vejce",
+            "lepek"
+          ],
+          "image": "assets/img/b-bramborove-rosti-1.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "l-jemne-rizoto-2",
+          "category": "lunch",
+          "family": "jemne-rizoto",
+          "title": "Mrkvové rizoto s mozzarellou",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 35,
+          "servings": 2,
+          "protein": "vegetarian",
+          "season": [
+            "all"
+          ],
+          "method": "risotto",
+          "ingredients": [
+            {
+              "name": "kulatozrnná rýže",
+              "amount": 185,
+              "unit": "g",
+              "section": "Trvanlivé"
+            },
+            {
+              "name": "olivový olej",
+              "amount": 15,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "mrkev",
+              "amount": 280,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "mozzarella",
+              "amount": 140,
+              "unit": "g",
+              "section": "Mléčné"
+            }
+          ],
+          "steps": [
+            "Rýži krátce zahřej na troše oleje, postupně přilévej horkou vodu a míchej.",
+            "Zeleninu zvlášť podus nebo upeč doměkka.",
+            "Když je rýže měkká, vmíchej zeleninu a až při podávání čerstvý sýr; nepoužívej dlouho skladovaný vývar."
+          ],
+          "allergens": [
+            "mléko"
+          ],
+          "image": "assets/img/l-jemne-rizoto-2.svg",
+          "image_kind": "originální ilustrace"
+        },
+        {
+          "id": "d-kruti-vecere-1",
+          "category": "dinner",
+          "family": "kruti-vecere",
+          "title": "Krůtí plátek s dýňovým pyré",
+          "description": "Jednoduché jídlo z čerstvých surovin, vhodné k individuálnímu otestování tolerance.",
+          "minutes": 35,
+          "servings": 2,
+          "protein": "meat",
+          "season": [
+            "all"
+          ],
+          "method": "meat",
+          "ingredients": [
+            {
+              "name": "krůtí prsa",
+              "amount": 320,
+              "unit": "g",
+              "section": "Maso"
+            },
+            {
+              "name": "řepkový olej",
+              "amount": 12,
+              "unit": "ml",
+              "section": "Ostatní"
+            },
+            {
+              "name": "dýně Hokkaido",
+              "amount": 340,
+              "unit": "g",
+              "section": "Zelenina"
+            },
+            {
+              "name": "brambory",
+              "amount": 230,
+              "unit": "g",
+              "section": "Zelenina"
+            }
+          ],
+          "steps": [
+            "Čerstvé maso zpracuj co nejdříve po nákupu, případně použij správně rozmražené. Nakrájej ho na menší porce a osol.",
+            "Maso zprudka zatáhni na pánvi, poté podle tloušťky a druhu dopeč či podus do bezpečného propečení; u drůbeže zkontroluj propečení ve středu.",
+            "Mezitím uvař uvedenou rýži, pohanku nebo brambory a připrav zeleninu v páře či na plechu.",
+            "Podávej hned; neskladuj maso opakovaně ohřívané několik dní."
+          ],
+          "allergens": [],
+          "image": "assets/img/d-kruti-vecere-1.svg",
+          "image_kind": "originální ilustrace"
+        }
+      ]
+    }
+  ],
+  "shopping": [
+    {
+      "name": "batáty",
+      "unit": "g",
+      "amount": 1020,
+      "section": "Zelenina"
+    },
+    {
+      "name": "brambory",
+      "unit": "g",
+      "amount": 2920,
+      "section": "Zelenina"
+    },
+    {
+      "name": "cuketa",
+      "unit": "g",
+      "amount": 870,
+      "section": "Zelenina"
+    },
+    {
+      "name": "dýně Hokkaido",
+      "unit": "g",
+      "amount": 2420,
+      "section": "Zelenina"
+    },
+    {
+      "name": "mrkev",
+      "unit": "g",
+      "amount": 910,
+      "section": "Zelenina"
+    },
+    {
+      "name": "okurka",
+      "unit": "g",
+      "amount": 150,
+      "section": "Zelenina"
+    },
+    {
+      "name": "borůvky",
+      "unit": "g",
+      "amount": 250,
+      "section": "Ovoce"
+    },
+    {
+      "name": "meruňky",
+      "unit": "g",
+      "amount": 130,
+      "section": "Ovoce"
+    },
+    {
+      "name": "cottage",
+      "unit": "g",
+      "amount": 490,
+      "section": "Mléčné"
+    },
+    {
+      "name": "mléko bez laktózy",
+      "unit": "ml",
+      "amount": 490,
+      "section": "Mléčné"
+    },
+    {
+      "name": "mozzarella",
+      "unit": "g",
+      "amount": 550,
+      "section": "Mléčné"
+    },
+    {
+      "name": "ricotta",
+      "unit": "g",
+      "amount": 1015,
+      "section": "Mléčné"
+    },
+    {
+      "name": "tvaroh",
+      "unit": "g",
+      "amount": 460,
+      "section": "Mléčné"
+    },
+    {
+      "name": "čerstvý kozí sýr",
+      "unit": "g",
+      "amount": 290,
+      "section": "Mléčné"
+    },
+    {
+      "name": "krůtí prsa",
+      "unit": "g",
+      "amount": 320,
+      "section": "Maso"
+    },
+    {
+      "name": "kuřecí prsa",
+      "unit": "g",
+      "amount": 320,
+      "section": "Maso"
+    },
+    {
+      "name": "vejce",
+      "unit": "ks",
+      "amount": 24,
+      "section": "Vejce"
+    },
+    {
+      "name": "hladká mouka",
+      "unit": "g",
+      "amount": 180,
+      "section": "Trvanlivé"
+    },
+    {
+      "name": "jáhly",
+      "unit": "g",
+      "amount": 185,
+      "section": "Trvanlivé"
+    },
+    {
+      "name": "kukuřičná mouka",
+      "unit": "g",
+      "amount": 170,
+      "section": "Trvanlivé"
+    },
+    {
+      "name": "kulatozrnná rýže",
+      "unit": "g",
+      "amount": 185,
+      "section": "Trvanlivé"
+    },
+    {
+      "name": "ovesná mouka",
+      "unit": "g",
+      "amount": 250,
+      "section": "Trvanlivé"
+    },
+    {
+      "name": "ovesné vločky",
+      "unit": "g",
+      "amount": 180,
+      "section": "Trvanlivé"
+    },
+    {
+      "name": "pohanka",
+      "unit": "g",
+      "amount": 460,
+      "section": "Trvanlivé"
+    },
+    {
+      "name": "pohanková mouka",
+      "unit": "g",
+      "amount": 110,
+      "section": "Trvanlivé"
+    },
+    {
+      "name": "rýže",
+      "unit": "g",
+      "amount": 180,
+      "section": "Trvanlivé"
+    },
+    {
+      "name": "bramborové noky",
+      "unit": "g",
+      "amount": 420,
+      "section": "Chlazené"
+    },
+    {
+      "name": "pažitka",
+      "unit": "g",
+      "amount": 28,
+      "section": "Bylinky"
+    },
+    {
+      "name": "olivový olej",
+      "unit": "ml",
+      "amount": 54,
+      "section": "Ostatní"
+    },
+    {
+      "name": "řepkový olej",
+      "unit": "ml",
+      "amount": 70,
+      "section": "Ostatní"
+    }
+  ]
+}
