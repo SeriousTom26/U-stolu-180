@@ -10,3 +10,38 @@
 /* Prices from Rohlík snapshot (not live). */
 .stats{grid-template-columns:repeat(5,minmax(120px,1fr))}.stat-price strong{font-size:22px;color:#145a88}.meal-price{display:block;margin-top:5px!important;color:#0d7a66!important;font-weight:800;font-size:11px!important}.price-overview{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}.price-summary{display:grid;gap:5px;padding:18px 21px;background:white;border:1px solid var(--line);border-radius:14px}.price-summary.emph{background:#eaf5f1;border-color:#c9e4d7}.price-summary small{font-size:10px;font-weight:800;color:var(--green);letter-spacing:.5px}.price-summary strong{font-size:28px;color:var(--navy)}.price-summary span{font-size:11px;color:var(--muted)}.shopping-name{flex:1;display:grid;gap:2px}.shopping-name span{font-weight:650}.shopping-prices{text-align:right;display:grid;gap:2px}.shopping-prices small{color:#0d7a66;font-size:11px}.shopping-prices .missing{color:#b36b27}.product-link{display:block;color:var(--blue);font-size:10px;font-weight:600;text-decoration:underline;margin-top:3px}.ingredient-details{text-align:right;display:grid;gap:1px}.ingredient-details small{font-size:11px;color:#0d7a66}.recipe-cost{font-size:15px!important;color:#0d7a66!important;font-weight:800}.price-table{display:grid;gap:9px}.price-row{display:flex;align-items:center;justify-content:space-between;gap:15px;background:white;border:1px solid var(--line);padding:14px 18px;border-radius:12px}.price-name{display:grid;gap:3px;font-size:13px}.price-name small{color:var(--muted)}.price-input{display:flex;align-items:center;gap:7px;font-size:11px;min-width:190px}.price-input input{width:96px;padding:9px;border:1px solid var(--line);border-radius:8px;text-align:right}.price-input span{color:var(--muted)}
 @media(max-width:1100px){.stats{grid-template-columns:repeat(3,minmax(120px,1fr))}}@media(max-width:650px){.stats,.price-overview{grid-template-columns:1fr 1fr}.price-summary strong{font-size:22px}.price-row{flex-wrap:wrap}.price-input{width:100%}.side-nav{grid-template-columns:repeat(5,1fr)}.nav-button{font-size:9px}}
+
+/* U stolu · prihlaseni, oblibene a zabezpecena sprava receptu */
+[hidden]{display:none!important}
+.account-pill{border:1px solid #b7d2e7;border-radius:12px;background:#e9f4fb;color:#164d78;padding:10px 15px;font-size:12px;font-weight:800;white-space:nowrap}
+.account-pill:hover{background:#d8eaf6}
+.favorite-button{border:1px solid #e0bcc7;border-radius:10px;background:white;color:#9f3d64;font-size:12px;font-weight:750;padding:10px 12px}
+.favorite-button[aria-pressed="true"]{background:#ffedf3;border-color:#da8fad;color:#a42f5e}
+.recipe-actions{display:flex;justify-content:space-between;align-items:center;gap:7px;flex-wrap:wrap;margin-top:10px}
+.recipe-actions .ghost,.recipe-actions .favorite-button{margin:0}
+.account-dialog{border:0;border-radius:20px;padding:0;width:min(440px,93vw);box-shadow:0 30px 90px #071c3c4f;max-height:90vh}
+.account-dialog::backdrop{background:#0b243eb8}
+.account-dialog-body{padding:30px 27px}
+.account-dialog-body h2{margin:12px 0 7px}
+.account-dialog-body p{font-size:13px}
+.account-form,.admin-form{display:grid;gap:14px}
+.account-form label,.admin-panel label{display:grid;gap:6px;font-size:12px;color:#36566c;font-weight:700}
+.account-form input,.admin-panel input,.admin-panel select,.admin-panel textarea{width:100%;border:1px solid #d5e1e9;border-radius:10px;padding:11px 12px;background:white;color:#1b344a;font-size:13px}
+.admin-panel textarea{resize:vertical;line-height:1.65}
+.account-form .primary{margin-top:5px;font-size:13px}
+.account-switch{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0}
+.account-switch button{border:0;background:none;color:#1e73a8;padding:6px;font-size:12px;text-decoration:underline}
+.account-message{font-size:12px;min-height:20px;color:#a33a37}
+.account-message.success{color:#197965}
+.admin-layout{display:grid;grid-template-columns:minmax(235px,290px) minmax(0,1fr);gap:18px;align-items:start}
+.admin-panel{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.admin-panel>label{margin:10px 0}.admin-panel>button{margin-top:12px}
+#adminRecipeSelect{height:275px;overflow:auto;padding:8px;margin-top:9px}
+#adminRecipeSelect option{padding:8px 5px;border-radius:5px}
+#adminRecipeSearch{margin-bottom:3px}
+.admin-panel .muted{font-size:12px;line-height:1.65}
+.admin-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.admin-preview{width:100%;max-width:360px;max-height:230px;object-fit:contain;background:#f2f5f6;border:1px solid #dbe5eb;border-radius:12px}
+.admin-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+@media(max-width:800px){.admin-layout{grid-template-columns:1fr}.admin-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.top-actions{width:100%}.side-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.account-pill{padding:9px}.admin-panel{padding:13px}}
