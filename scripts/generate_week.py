@@ -3,7 +3,7 @@
 Requires Python standard library only; intended for GitHub Actions.
 """
 from __future__ import annotations
-import argparse, collections, datetime as dt, hashlib, json, random
+import argparse, collections, datetime as dt, hashlib, json, random, os, urllib.parse, urllib.request
 from pathlib import Path
 from zoneinfo import ZoneInfo
 ROOT=Path(__file__).resolve().parents[1]
@@ -98,6 +98,45 @@ def make_week(week_start:dt.date, recipes:list[dict], history:list[dict]):
                      'Čerstvé mléčné výrobky a vejce podle vlastní tolerance; přísné vyřazování má být krátkodobé'],
             'days':selected_by_day,'shopping':shopping}
 
+
+def load_online_recipes(offline:list[dict])->list[dict]:
+    """Merge admin edits from Supabase into the local 180-recipe catalog.
+    Safe offline default: if no public endpoint is configured, use bundled library.
+    If configured but unreachable, fail the scheduled job rather than silently using stale data.
+    """
+    url=os.environ.get('USTOLU_SUPABASE_URL','').rstrip('/')
+    key=os.environ.get('USTOLU_SUPABASE_PUBLISHABLE_KEY','')
+    if not url and not key:return offline
+    if not url or not key or not url.startswith('https://'):
+        raise RuntimeError('Configure BOTH USTOLU_SUPABASE_URL and USTOLU_SUPABASE_PUBLISHABLE_KEY.')
+    base={r['id']:dict(r) for r in offline}
+    for offset in range(0,10000,500):
+        query=urllib.parse.urlencode({'select':'id,body,image_url','order':'id.asc','limit':500,'offset':offset})
+        req=urllib.request.Request(url+'/rest/v1/recipes?'+query,headers={
+            'apikey':key,'Accept':'application/json','User-Agent':'UStoluWeeklyMealPlanner/1.0'
+        })
+        with urllib.request.urlopen(req,timeout=20) as response:
+            rows=json.load(response)
+        if not isinstance(rows,list):raise ValueError('Unexpected Supabase recipes response.')
+        for row in rows:
+            record=row.get('body')
+            rid=row.get('id')
+            if not isinstance(record,dict) or not rid or rid != record.get('id'):
+                raise ValueError('Supabase returned invalid recipe data.')
+            updated={**base.get(rid,{}),**record,'id':rid}
+            if row.get('image_url'):updated['remote_image']=row['image_url']
+            if not updated.get('image'):updated['image']='assets/placeholder.svg'
+            if updated.get('category') not in KEYS or updated.get('protein') not in ('vegetarian','meat'):
+                raise ValueError('Invalid recipe category/protein: '+rid)
+            if not isinstance(updated.get('ingredients'),list) or len(updated['ingredients'])<2:
+                raise ValueError('Invalid ingredients: '+rid)
+            if not isinstance(updated.get('steps'),list) or len(updated['steps'])<3:
+                raise ValueError('Invalid steps: '+rid)
+            base[rid]=updated
+        if len(rows)<500:break
+    print('Loaded recipes, including online admin changes:',len(base))
+    return list(base.values())
+
 def generate(week_start:dt.date|None=None):
     if week_start is None:week_start=next_monday(dt.datetime.now(ZoneInfo('Europe/Prague')).date())
     if week_start.weekday()!=0:raise ValueError('The date must be a Monday (YYYY-MM-DD).')
@@ -106,7 +145,7 @@ def generate(week_start:dt.date|None=None):
     if target.exists():
         print(f'Week {filename} already exists; preserving history unchanged.')
         return False
-    library=read_json(LIBRARY)['recipes']
+    library=load_online_recipes(read_json(LIBRARY)['recipes'])
     history=load_history()
     plan=make_week(week_start,library,history)
     save_json(target,plan)
