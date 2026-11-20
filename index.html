@@ -7,7 +7,10 @@
   <meta name="description" content="Týdenní nízkohistaminový jídelníček pro dvě osoby s recepty, historií a nákupním seznamem.">
   <title>U stolu · týdenní jídelníček</title>
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/backend-config.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
   <script src="assets/app.js" defer></script>
+  <script src="assets/accounts.js" defer></script>
 </head>
 <body>
 <div class="shell">
@@ -17,6 +20,8 @@
     <nav class="side-nav" id="sideNav">
       <button class="nav-button active" data-view="week"><span>▦</span> Tento týden</button>
       <button class="nav-button" data-view="catalog"><span>◫</span> Recepty</button>
+      <button class="nav-button" data-view="favorites"><span>♡</span> Oblíbené</button>
+      <button class="nav-button" data-view="admin" id="adminNav" hidden><span>✎</span> Správa receptů</button>
       <button class="nav-button" data-view="shopping"><span>◉</span> Nákupní seznam</button>
       <button class="nav-button" data-view="archive"><span>◷</span> Historie</button>
       <button class="nav-button" data-view="prices"><span>▤</span> Ceník Rohlík</button>
@@ -30,13 +35,13 @@
   <main class="main">
     <header class="topbar">
       <div class="top-title"><div class="eyebrow">TÝDENNÍ PLÁNOVAČ · NÍZKOHISTAMINOVÁ STRAVA</div><h1 id="pageTitle">Jídelníček na týden</h1></div>
-      <div class="top-actions"><label class="selector-wrap">Vybraný týden <select id="weekSelect" aria-label="Vyberte týden"></select></label><span class="people">♙ &nbsp; 2 osoby</span></div>
+      <div class="top-actions"><label class="selector-wrap">Vybraný týden <select id="weekSelect" aria-label="Vyberte týden"></select></label><span class="people">♙ &nbsp; 2 osoby</span><button class="account-pill" id="accountButton" type="button">Přihlásit se</button></div>
     </header>
     <div id="loading" class="loading">Načítám jídelníček…</div>
     <div id="appContent" hidden>
       <section id="view-week" class="view">
         <div class="welcome"><div><span class="eyebrow">JÍDELNÍČEK PŘIPRAVEN</span><h2 id="weekHeading"></h2><p>Každý den tři jídla s jednoduchým postupem. Klikni na obrázek pro detail receptu nebo na den pro větší náhled.</p></div><span class="welcome-icon">❀</span></div>
-        <div class="stats"><div class="stat"><strong>21</strong><span>jídel na týden</span></div><div class="stat"><strong>2</strong><span>porce od každého</span></div><div class="stat"><strong>2×</strong><span>maso za týden</span></div><div class="stat"><strong id="recipeCount">180</strong><span>receptů v knihovně</span></div><div class="stat stat-price"><strong id="weekIngredientsCost">—</strong><span>spotřebované suroviny / týden</span></div></div>
+        <div class="stats"><div class="stat"><strong>21</strong><span>jídel na týden</span></div><div class="stat"><strong>2</strong><span>porce od každého</span></div><div class="stat"><strong>2×</strong><span>maso za týden</span></div><div class="stat"><strong id="recipeCount">0</strong><span>receptů v knihovně</span></div><div class="stat stat-price"><strong id="weekIngredientsCost">—</strong><span>spotřebované suroviny / týden</span></div></div>
         <div class="section-heading"><div><h2>Celý týden</h2><p>7 dní · snídaně, obědy, večeře</p></div><button class="ghost" data-view="shopping">Zobrazit nákup →</button></div>
         <div class="weekly-scroll"><div id="weekGrid" class="week-grid"></div></div>
         <p class="tip-note">Tip: svačiny si sestav podle vlastních tolerovaných potravin. Při histaminové intoleranci je důležitá čerstvost a bezpečné skladování.</p>
@@ -48,13 +53,65 @@
         <p class="tip-note">Orientační ceník z veřejné nabídky <a href="https://www.rohlik.cz/" target="_blank" rel="noopener noreferrer">Rohlik.cz</a>, ověřený <span id="priceCheckedAt">—</span>. Ceny nejsou živé, mohou záviset na účtu, místě doručení a akcích. Cena receptu počítá spotřebu, cena nákupu počítá celá balení. Nepředstavuje aktuální košík ani závaznou nabídku.</p>
         <div class="price-overview"><div class="price-summary"><small>JÍDELNÍČEK · SPOTŘEBOVANÉ SUROVINY</small><strong id="shoppingConsumedCost">—</strong><span id="shoppingConsumedNote">Ceny za použité množství.</span></div><div class="price-summary emph"><small>ODHAD NÁKUPU CELÝCH BALENÍ</small><strong id="shoppingCartCost">—</strong><span id="shoppingCartNote">Při nákupu všech surovin; bez dopravy.</span></div></div><div class="shopping-layout"><div id="shoppingGroups"></div><div class="shopping-side"><div class="side-plain"><span class="eyebrow">NÁKUP NA TENTO TÝDEN</span><strong id="shoppingItemsCount"></strong><span>jednotlivých položek</span><p id="shoppingCheckedCount"></p></div><p>U vajec počítáme kusy, u ostatních výrobků gramy nebo mililitry. Uvedené množství je součtem receptů, nikoliv počtem balení.</p></div></div>
       </section>
-      <section id="view-catalog" class="view" hidden><div class="section-heading"><div><h2>Knihovna receptů</h2><p>180 připravených variant; pokaždé jiný výběr</p></div><span class="soft-label">bez nových API volání</span></div><div class="catalog-toolbar"><input id="catalogSearch" type="search" placeholder="Hledat recept podle názvu nebo suroviny…" aria-label="Hledat v receptech"><select id="catalogCategory"><option value="all">Všechna jídla</option><option value="breakfast">Snídaně</option><option value="lunch">Obědy</option><option value="dinner">Večeře</option></select></div><p id="catalogCount" class="muted"></p><div id="catalogGrid" class="catalog-grid"></div></section>
-      <section id="view-prices" class="view" hidden><div class="section-heading"><div><h2>Ceník surovin podle Rohlíku</h2><p>Referenční ceny balení, použité při výpočtu všech 180 receptů.</p></div><button id="resetPrices" class="ghost">Obnovit ověřený ceník</button></div><p class="tip-note">Ceny jsou uložený snímek veřejné nabídky. Změní-li se cena, můžeš ji v tomto prohlížeči přepsat; úprava se ukládá jen do tohoto zařízení a neodesílá se do GitHubu. Každý produkt má odkaz na Rohlík pro kontrolu.</p><div id="priceTable" class="price-table"></div></section>
+      <section id="view-catalog" class="view" hidden><div class="section-heading"><div><h2>Knihovna receptů</h2><p>Aktuální knihovna receptů; pokaždé jiný výběr</p></div><span class="soft-label">bez nových API volání</span></div><div class="catalog-toolbar"><input id="catalogSearch" type="search" placeholder="Hledat recept podle názvu nebo suroviny…" aria-label="Hledat v receptech"><select id="catalogCategory"><option value="all">Všechna jídla</option><option value="breakfast">Snídaně</option><option value="lunch">Obědy</option><option value="dinner">Večeře</option></select></div><p id="catalogCount" class="muted"></p><div id="catalogGrid" class="catalog-grid"></div></section>
+      <section id="view-favorites" class="view" hidden>
+        <div class="section-heading"><div><h2>Moje oblíbené recepty</h2><p>Uložené k tvému účtu a dostupné z telefonu i počítače.</p></div></div>
+        <p id="favoritesInfo" class="tip-note">Přihlas se a ukládej si recepty srdíčkem.</p>
+        <div id="favoritesGrid" class="catalog-grid"></div>
+      </section>
+      <section id="view-admin" class="view" hidden>
+        <div class="section-heading"><div><h2>Správa receptů</h2><p>Přidávání, úpravy surovin, postupů a fotografií. Jen administrátor.</p></div></div>
+        <div class="admin-layout">
+          <section class="admin-panel">
+            <label for="adminRecipeSelect">Vybrat recept</label>
+            <input id="adminRecipeSearch" type="search" placeholder="Hledat podle názvu…">
+            <select id="adminRecipeSelect" size="9" aria-label="Seznam receptů"></select>
+            <button type="button" class="primary" id="adminNew">+ Nový recept</button>
+            <p class="muted">Změny se ukládají bezpečně do databáze a objeví se všem návštěvníkům webu.</p>
+          </section>
+          <form id="adminForm" class="admin-panel admin-form" autocomplete="off">
+            <div class="admin-grid">
+              <label>ID receptu<input id="adminId" name="id" required pattern="[a-z0-9][a-z0-9-]{2,79}" maxlength="80" placeholder="např. vlastni-snidane-1"></label>
+              <label>Kategorie<select id="adminCategory" name="category"><option value="breakfast">Snídaně</option><option value="lunch">Oběd</option><option value="dinner">Večeře</option></select></label>
+            </div>
+            <label>Název receptu<input id="adminTitle" name="title" required maxlength="160"></label>
+            <label>Popis<textarea id="adminDescription" name="description" rows="3" maxlength="2000"></textarea></label>
+            <div class="admin-grid">
+              <label>Doba přípravy (min)<input id="adminMinutes" name="minutes" type="number" min="1" max="600" value="30" required></label>
+              <label>Typ jídla<select id="adminProtein" name="protein"><option value="vegetarian">Bez masa</option><option value="meat">S masem</option></select></label>
+              <label>Skupina receptů<input id="adminFamily" name="family" maxlength="100" placeholder="např. vlastni-recepty"></label>
+              <label>Způsob přípravy<select id="adminMethod" name="method"><option value="bake">Pečení</option><option value="tray">Plech</option><option value="meat">Maso</option><option value="soup">Polévka</option><option value="salad">Salát</option><option value="pancake">Palačinky</option><option value="fritter">Placičky</option><option value="rice">Rýže</option><option value="pasta">Těstoviny</option><option value="potato">Brambory</option><option value="gnocchi">Noky</option><option value="omelet">Omeleta</option><option value="polenta">Polenta</option><option value="muffin">Muffiny</option><option value="other">Jiné</option></select></label>
+            </div>
+            <label>Suroviny – jedna na řádek, oddělení znakem |<textarea id="adminIngredients" name="ingredients" rows="7" required placeholder="brambory | 400 | g | Zelenina&#10;vejce | 2 | ks | Vejce"></textarea></label>
+            <label>Postup – jeden krok na řádek<textarea id="adminSteps" name="steps" rows="6" required placeholder="Očisti suroviny.&#10;Připrav jídlo.&#10;Podávej čerstvé."></textarea></label>
+            <label>Alergeny – oddělené čárkou<input id="adminAllergens" name="allergens" placeholder="mléko, vejce"></label>
+            <label>Fotografie (JPG, PNG nebo WebP, do 6 MB)<input type="file" id="adminPhoto" name="photo" accept="image/jpeg,image/png,image/webp"></label>
+            <img id="adminPreview" class="admin-preview" src="assets/placeholder.svg" alt="Náhled fotografie receptu">
+            <div class="admin-actions"><button class="primary" type="submit" id="adminSave">Uložit recept</button><span id="adminStatus" role="status" class="muted"></span></div>
+          </form>
+        </div>
+      </section>
+      <section id="view-prices" class="view" hidden><div class="section-heading"><div><h2>Ceník surovin podle Rohlíku</h2><p>Referenční ceny balení, použité při výpočtu všech receptů.</p></div><button id="resetPrices" class="ghost">Obnovit ověřený ceník</button></div><p class="tip-note">Ceny jsou uložený snímek veřejné nabídky. Změní-li se cena, můžeš ji v tomto prohlížeči přepsat; úprava se ukládá jen do tohoto zařízení a neodesílá se do GitHubu. Každý produkt má odkaz na Rohlík pro kontrolu.</p><div id="priceTable" class="price-table"></div></section>
       <section id="view-archive" class="view" hidden><div class="section-heading"><div><h2>Historie jídelníčků</h2><p>Každý vygenerovaný týden se ukládá samostatně</p></div></div><div id="archiveGrid" class="archive-grid"></div></section>
     </div>
     <footer class="footer">U stolu · Recepty jsou návrhy, nikoliv zdravotní doporučení. Potraviny vybírej podle své tolerance. <span id="statusMessage" role="status"></span></footer>
   </main>
 </div>
-<dialog id="recipeDialog" class="recipe-dialog"><button class="dialog-close" id="closeRecipe" aria-label="Zavřít recept">×</button><div class="dialog-scroll"><img id="modalImage" src="assets/placeholder.svg" alt="" class="dialog-img"><div class="dialog-body"><span id="modalType" class="eyebrow"></span><h2 id="modalTitle"></h2><p id="modalDescription"></p><div id="modalTags" class="chips"></div><p class="muted" id="modalMeta"></p><div class="dialog-cols"><div><h3>Suroviny na 2 porce</h3><p id="modalRecipeCost" class="recipe-cost"></p><ul id="modalIngredients" class="ingredients"></ul></div><div><h3>Postup</h3><ol id="modalSteps" class="steps"></ol></div></div><p class="notice">Ceny jsou orientační a vycházejí z veřejné nabídky Rohlíku k uvedenému datu, nikoliv z aktuálního košíku. Náklady na suroviny pro recept jsou poměrným výpočtem z balení; prodej celých balení může být dražší.</p><p class="notice">AI fotografie či ilustrace je pouze orientační a nemusí odpovídat přesným surovinám receptu. U reálných fotografií je uveden zdroj a licence. Čerstvé mléčné výrobky, vejce a některé druhy ovoce mohou být individuálně problematické. Pokud máš po konkrétní potravině reakce, nezařazuj ji.</p></div></div></dialog>
+<dialog id="recipeDialog" class="recipe-dialog"><button class="dialog-close" id="closeRecipe" aria-label="Zavřít recept">×</button><div class="dialog-scroll"><img id="modalImage" src="assets/placeholder.svg" alt="" class="dialog-img"><div class="dialog-body"><span id="modalType" class="eyebrow"></span><h2 id="modalTitle"></h2><button id="modalFavorite" type="button" class="favorite-button" aria-pressed="false">♡ Uložit do oblíbených</button><p id="modalDescription"></p><div id="modalTags" class="chips"></div><p class="muted" id="modalMeta"></p><div class="dialog-cols"><div><h3>Suroviny na 2 porce</h3><p id="modalRecipeCost" class="recipe-cost"></p><ul id="modalIngredients" class="ingredients"></ul></div><div><h3>Postup</h3><ol id="modalSteps" class="steps"></ol></div></div><p class="notice">Ceny jsou orientační a vycházejí z veřejné nabídky Rohlíku k uvedenému datu, nikoliv z aktuálního košíku. Náklady na suroviny pro recept jsou poměrným výpočtem z balení; prodej celých balení může být dražší.</p><p class="notice">AI fotografie či ilustrace je pouze orientační a nemusí odpovídat přesným surovinám receptu. U reálných fotografií je uveden zdroj a licence. Čerstvé mléčné výrobky, vejce a některé druhy ovoce mohou být individuálně problematické. Pokud máš po konkrétní potravině reakce, nezařazuj ji.</p></div></div></dialog>
+<dialog id="accountDialog" class="account-dialog">
+  <button class="dialog-close" type="button" id="closeAccount" aria-label="Zavřít">×</button>
+  <div class="account-dialog-body">
+    <span class="eyebrow">U STOLU · MŮJ ÚČET</span><h2 id="accountHeading">Přihlášení</h2>
+    <p id="accountHelp" class="muted">Oblíbené recepty se ukládají do tvého účtu.</p>
+    <form id="accountForm" class="account-form">
+      <label id="accountEmailRow">E-mail<input id="accountEmail" type="email" autocomplete="email" required></label>
+      <label>Heslo<input id="accountPassword" type="password" minlength="8" autocomplete="current-password" required></label>
+      <button type="submit" class="primary" id="accountSubmit">Přihlásit se</button>
+    </form>
+    <div id="accountSwitch" class="account-switch"><button type="button" data-account-mode="login">Přihlášení</button><button type="button" data-account-mode="signup">Registrace</button><button type="button" data-account-mode="forgot">Zapomenuté heslo</button></div>
+    <div id="loggedInPanel" hidden><p id="loggedInEmail"></p><p id="loggedInRole" class="soft-label"></p><button id="accountLogout" class="ghost" type="button">Odhlásit se</button></div>
+    <p id="accountStatus" role="status" class="account-message"></p>
+  </div>
+</dialog>
 </body>
 </html>
